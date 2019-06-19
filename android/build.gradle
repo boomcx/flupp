@@ -25,10 +25,16 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 17
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+
+
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    api "com.paypal.sdk:paypal-android-sdk:2.16.0"
 }

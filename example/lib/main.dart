@@ -18,6 +18,14 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     initPlatformState();
+
+    //
+    Flupp.register(
+      sandbox:
+      "AU4zQhs9G_nyYAvnNh64quK8UpUrrFZVbEom7ygmr2FwzmjEkLflcDV0Yso2cXhSjZRxfpKp4D6Lt53c",
+      production:
+      "AS_cHzhWtzdQE1GFPjix2c_l8Ga7Jp_8BDhc0g5IsO8qvWobZkT_RXdtEmenZpN0PrXOwR0oJE5oSYh7",
+    );
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -48,7 +56,19 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: InkWell(
+            child: Text('Running on: $_platformVersion\n'),
+            onTap: () {
+              //
+              print('123123');
+
+
+              Flupp.payment(moneys: "100", shortDesc: '充值').then((data) {
+                print(data);
+              });
+
+            },
+          )
         ),
       ),
     );
