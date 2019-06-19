@@ -152,7 +152,7 @@ public class PayPalHelper {
 //        //--- set other optional fields like invoice_number, custom field, and soft_descriptor
 //        payment.custom("This is text that will be associated with the payment that the app can use.");
         PayPalPayment payment = new PayPalPayment(new BigDecimal(moneys), currentcy, shotDesc,
-                paymentIntent)
+                paymentIntent);
         return payment;
     }
 
