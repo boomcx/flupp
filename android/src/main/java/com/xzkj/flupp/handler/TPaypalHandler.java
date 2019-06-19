@@ -1,13 +1,10 @@
 package com.xzkj.flupp.handler;
 
-import android.text.TextUtils;
-
-import java.util.Map;
-
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.PluginRegistry;
+import io.flutter.plugin.common.MethodChannel.Result;
 
-public class TPaypalHandler{
+public class TPaypalHandler {
 
     private PluginRegistry.Registrar mActivity;
 
@@ -25,11 +22,11 @@ public class TPaypalHandler{
     }
 
     public void register(MethodCall params) {
-        PayPalHelper.getInstance().startPayPalService(mActivity.context(), params);
+        PayPalHelper.getInstance().startPayPalService(mActivity, params);
     }
 
-    public void pay(String moneys, String currentcy, String shotDesc) {
+    public void pay(MethodCall call, Result result) {
         //支付
-        PayPalHelper.getInstance().doPayPalPay(mActivity.activity(), TextUtils.isEmpty(moneys) ? "0.01" : moneys,currentcy,shotDesc);
+        PayPalHelper.getInstance().doPayPalPay(call, result);
     }
 }
