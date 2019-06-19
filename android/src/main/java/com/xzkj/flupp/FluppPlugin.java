@@ -36,8 +36,8 @@ public class FluppPlugin implements MethodCallHandler {
       Log.e(Tag,"registerPayPal");
     } else if (call.method.equals("sendPayPal")) {
       String moneys = call.argument("moneys");
-      String currentcy = call.argument("currentcy");
-      String shotDesc = call.argument("shotDesc");
+      String currentcy = call.argument("currency");
+      String shotDesc = call.argument("short");
       TPaypalHandler.instance(mContext).pay(moneys,currentcy,shotDesc);
       Log.e(Tag,"sendPayPal");
     } else if (call.method.equals("getPlatformVersion")) {

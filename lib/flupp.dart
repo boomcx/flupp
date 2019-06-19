@@ -30,7 +30,7 @@ class Flupp {
     Map args = {
       'moneys': moneys,
       'currency': currency ?? 'USD',
-      'desc': shortDesc,
+      'short': shortDesc,
     };
     final result = await _channel.invokeMethod('sendPayPal', args);
     return result;
