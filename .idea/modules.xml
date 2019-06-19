@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flupp.iml" filepath="$PROJECT_DIR$/flupp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/flupp_android.iml" filepath="$PROJECT_DIR$/android/flupp_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/flupp_example_android.iml" filepath="$PROJECT_DIR$/example/android/flupp_example_android.iml" />
+    </modules>
+  </component>
+</project>
