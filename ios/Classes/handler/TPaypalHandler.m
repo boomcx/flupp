@@ -70,7 +70,7 @@
     payment.amount = [NSDecimalNumber decimalNumberWithString:call.arguments[@"moneys"]];
     // 不支持人民币（CNY）
     payment.currencyCode = @"USD";
-    payment.shortDescription = call.arguments[@"desc"];
+    payment.shortDescription = call.arguments[@"short"];
 
     if (!payment.processable) {
         // 支付参数体错误
