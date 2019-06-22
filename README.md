@@ -4,6 +4,7 @@
 ### 目前存在问题
  > Android 打包只能使用常规打包方式 Build -> Generate Singed Buildle APK -> release. 勾选 V1 V2，然后执行打包。
  > 这样操作会导致项目比较卡（可能是我插件有冲突或者其他什么的，swiper...），问题目前还在排查中。
+ > 有大佬不嫌麻烦，可以帮忙看看 >_<
 
 ## 安装
 在你的`pubspec.yaml`文件的dependencies节点下添加:
