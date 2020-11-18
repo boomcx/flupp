@@ -86,7 +86,7 @@ public class PayPalHelper implements ActivityResultListener {
 
 
         //配置何种支付环境，一般沙盒，正式
-        if(isApkInDebug(context)) {
+        if(isApkInDebug(this.context)) {
 
             String clientId = params.argument("sandbox");
             config = new PayPalConfiguration()
